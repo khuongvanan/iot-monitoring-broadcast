@@ -1,0 +1,139 @@
+
+(rules PCB k1.dsn
+  (snapAngle
+    fortyfive_degree
+  )
+  (rule
+    (width 250.0)
+    (clearance 200.0)
+    (clearance 125.0 (type smd_to_turn_gap))
+    (clearance 50.0 (type smd))
+    (clearance 300.0 (type OUTPUT,Default))
+    (clearance 250.0 (type POWER,Default))
+    (clearance 200.0 (type SIGNAL,Default))
+    (clearance 500.0 (type "board_edge"))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle TopLayer 600.0 0.0 0.0)
+    )
+    (shape
+      (circle BottomLayer 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_1000:500_um"
+    (shape
+      (circle TopLayer 1000.0 0.0 0.0)
+    )
+    (shape
+      (circle BottomLayer 1000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle TopLayer 800.0 0.0 0.0)
+    )
+    (shape
+      (circle BottomLayer 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via
+    "Via[0-1]_1000:500_um" "Via[0-1]_1000:500_um" default
+  )
+  (via
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via
+    "Via[0-1]_600:300_um-OUTPUT,Default" "Via[0-1]_600:300_um" OUTPUT,Default
+  )
+  (via
+    "Via[0-1]_1000:500_um-OUTPUT,Default" "Via[0-1]_1000:500_um" OUTPUT,Default
+  )
+  (via
+    "Via[0-1]_800:400_um-OUTPUT,Default" "Via[0-1]_800:400_um" OUTPUT,Default
+  )
+  (via
+    "Via[0-1]_600:300_um-POWER,Default" "Via[0-1]_600:300_um" POWER,Default
+  )
+  (via
+    "Via[0-1]_1000:500_um-POWER,Default" "Via[0-1]_1000:500_um" POWER,Default
+  )
+  (via
+    "Via[0-1]_800:400_um-POWER,Default" "Via[0-1]_800:400_um" POWER,Default
+  )
+  (via
+    "Via[0-1]_600:300_um-SIGNAL,Default" "Via[0-1]_600:300_um" SIGNAL,Default
+  )
+  (via
+    "Via[0-1]_1000:500_um-SIGNAL,Default" "Via[0-1]_1000:500_um" SIGNAL,Default
+  )
+  (via
+    "Via[0-1]_800:400_um-SIGNAL,Default" "Via[0-1]_800:400_um" SIGNAL,Default
+  )
+  (viaRule
+    default "Via[0-1]_600:300_um"
+  )
+  (viaRule
+    default "Via[0-1]_600:300_um"
+  )
+  (viaRule
+    OUTPUT,Default "Via[0-1]_1000:500_um-OUTPUT,Default"
+  )
+  (viaRule
+    POWER,Default "Via[0-1]_800:400_um-POWER,Default"
+  )
+  (viaRule
+    SIGNAL,Default "Via[0-1]_600:300_um-SIGNAL,Default"
+  )
+  (class default
+    GND "Net-(U3-BSNL)" "Net-(U3-OUTNL)" "Net-(U3-RINP)" "Net-(U3-RINN)" "Net-(U3-GVDD)" "unconnected-(U3-SYNC-Pad16)" "Net-(U3-BSPL)"
+    "Net-(U3-BSNR)" "Net-(U3-OUTNR)" "Net-(U3-BSPR)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit
+      (use_layer TopLayer BottomLayer)
+    )
+  )
+  (class OUTPUT,Default
+    "/OUT_P_SUB" "/OUT_N_SUB"
+    (clearance_class OUTPUT,Default)
+    (via_rule OUTPUT,Default)
+    (rule
+      (width 1500.0)
+    )
+    (circuit
+      (use_layer TopLayer BottomLayer)
+    )
+  )
+  (class POWER,Default
+    +15V
+    (clearance_class POWER,Default)
+    (via_rule POWER,Default)
+    (rule
+      (width 1000.0)
+    )
+    (circuit
+      (use_layer TopLayer BottomLayer)
+    )
+  )
+  (class SIGNAL,Default
+    "/{slash}SD_SUB" "Net-(U3-GAIN{slash}SLV)" "/MUTE_SUB" "/IN_P_SUB" "/IN_N_SUB"
+    (clearance_class SIGNAL,Default)
+    (via_rule SIGNAL,Default)
+    (rule
+      (width 250.0)
+    )
+    (circuit
+      (use_layer TopLayer BottomLayer)
+    )
+  )
+)

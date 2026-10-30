@@ -1,0 +1,1663 @@
+{
+  "title": "School Node | Giám sát & Phát thanh",
+  "name": "School Node | Giám sát & Phát thanh",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "widgets": {
+      "2bd69dbb-f04c-463f-bc6e-f808a5e4e9d1": {
+        "typeFullFqn": "system.cards.html_card",
+        "type": "static",
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "#f0f7fa",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class=\"panel\"><div class=\"eyebrow\">SCHOOL NODE / GIÁM SÁT & PHÁT THANH</div><h1></h1><div class=\"muted\"><br>Thiết bị: <b>demo-device</b> </div></div>",
+            "cardCss": ".panel{box-sizing:border-box;height:100%;padding:22px 26px;font-family:Roboto,Arial,sans-serif;overflow:auto;color:#152b43}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.6px;color:#168c91;margin-bottom:10px}.panel h1{font-size:28px;margin:0 0 8px;letter-spacing:-.6px}.panel h2{font-size:20px;margin:0 0 14px}.muted{color:#63758b;font-size:13px;line-height:1.65}.metric{font-size:36px;font-weight:600;margin:12px 0}.unit{font-size:16px;color:#63758b}.line{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px solid #e8edf3;font-size:14px}.line b{color:#152b43}code{display:block;background:#edf3f8;border-radius:8px;padding:10px 12px;margin:9px 0;font:13px monospace;white-space:pre-wrap;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:30px;background:#e4f5f2;color:#187b72;padding:5px 10px;font-size:12px}.alarm-true{background:#fff0ef!important;color:#b42318!important}.alarm-false{background:#e6f6f1!important;color:#187b72!important}.alarm-true .normal,.alarm-false .danger{display:none}.alarm- .normal,.alarm- .danger{display:none}.alarm-true .unknown,.alarm-false .unknown{display:none}"
+          },
+          "title": "School Node",
+          "dropShadow": false,
+          "borderRadius": "16px",
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef",
+            "border-radius": "16px"
+          },
+          "actions": {}
+        },
+        "id": "2bd69dbb-f04c-463f-bc6e-f808a5e4e9d1",
+        "sizeX": 24,
+        "sizeY": 3
+      },
+      "26ad8b03-4b0c-4370-8e40-2528f73766b4": {
+        "typeFullFqn": "system.cards.value_card",
+        "type": "latest",
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "demo-device",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "NHIỆT ĐỘ",
+                  "color": "#168c91",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "labelPosition": "top",
+            "layout": "square",
+            "showLabel": true,
+            "labelFont": {
+              "family": "Roboto",
+              "size": 16,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500"
+            },
+            "labelColor": {
+              "type": "constant",
+              "color": "rgba(0, 0, 0, 0.87)",
+              "colorFunction": "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+            },
+            "showIcon": true,
+            "iconSize": 40,
+            "iconSizeUnit": "px",
+            "icon": "thermostat",
+            "iconColor": {
+              "type": "constant",
+              "color": "#d76736",
+              "colorFunction": "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+            },
+            "valueFont": {
+              "family": "Roboto",
+              "size": 40,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500"
+            },
+            "valueColor": {
+              "type": "constant",
+              "color": "#d76736",
+              "colorFunction": "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+            },
+            "showDate": true,
+            "dateFormat": {
+              "format": null,
+              "lastUpdateAgo": true,
+              "custom": false
+            },
+            "dateFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500"
+            },
+            "dateColor": {
+              "type": "constant",
+              "color": "rgba(0, 0, 0, 0.38)",
+              "colorFunction": "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+            },
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            }
+          },
+          "title": "NHIỆT ĐỘ",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "units": "°C",
+          "decimals": 1,
+          "showLegend": false,
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef"
+          },
+          "actions": {},
+          "configMode": "basic",
+          "margin": "0px",
+          "borderRadius": "16px",
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "Chưa có dữ liệu",
+          "enableDataExport": false,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "titleFont": {
+            "size": 12,
+            "sizeUnit": "px",
+            "family": null,
+            "weight": null,
+            "style": null,
+            "lineHeight": "1.6"
+          },
+          "titleIcon": "",
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "14px",
+          "timewindowStyle": {
+            "showIcon": true,
+            "iconSize": "14px",
+            "icon": "query_builder",
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": null,
+              "weight": null,
+              "style": null,
+              "lineHeight": "1"
+            },
+            "color": null
+          }
+        },
+        "id": "26ad8b03-4b0c-4370-8e40-2528f73766b4",
+        "sizeX": 6,
+        "sizeY": 4
+      },
+      "878cabac-be77-4f80-8204-9b573210c66b": {
+        "typeFullFqn": "system.cards.value_card",
+        "type": "latest",
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "demo-device",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "ĐỘ ẨM",
+                  "color": "#168c91",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "labelPosition": "top",
+            "layout": "square",
+            "showLabel": true,
+            "labelFont": {
+              "family": "Roboto",
+              "size": 16,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500"
+            },
+            "labelColor": {
+              "type": "constant",
+              "color": "rgba(0, 0, 0, 0.87)",
+              "colorFunction": "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+            },
+            "showIcon": true,
+            "iconSize": 40,
+            "iconSizeUnit": "px",
+            "icon": "water_drop",
+            "iconColor": {
+              "type": "constant",
+              "color": "#2484b5",
+              "colorFunction": "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+            },
+            "valueFont": {
+              "family": "Roboto",
+              "size": 40,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500"
+            },
+            "valueColor": {
+              "type": "constant",
+              "color": "#2484b5",
+              "colorFunction": "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+            },
+            "showDate": true,
+            "dateFormat": {
+              "format": null,
+              "lastUpdateAgo": true,
+              "custom": false
+            },
+            "dateFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500"
+            },
+            "dateColor": {
+              "type": "constant",
+              "color": "rgba(0, 0, 0, 0.38)",
+              "colorFunction": "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+            },
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            }
+          },
+          "title": "ĐỘ ẨM",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "units": "%",
+          "decimals": 1,
+          "showLegend": false,
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef"
+          },
+          "actions": {},
+          "configMode": "basic",
+          "margin": "0px",
+          "borderRadius": "16px",
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "Chưa có dữ liệu",
+          "enableDataExport": false,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "titleFont": {
+            "size": 12,
+            "sizeUnit": "px",
+            "family": null,
+            "weight": null,
+            "style": null,
+            "lineHeight": "1.6"
+          },
+          "titleIcon": "",
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "14px",
+          "timewindowStyle": {
+            "showIcon": true,
+            "iconSize": "14px",
+            "icon": "query_builder",
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": null,
+              "weight": null,
+              "style": null,
+              "lineHeight": "1"
+            },
+            "color": null
+          }
+        },
+        "id": "878cabac-be77-4f80-8204-9b573210c66b",
+        "sizeX": 6,
+        "sizeY": 4
+      },
+      "1c6eb1a3-2f35-4f23-a45a-03de8a18b3fa": {
+        "typeFullFqn": "system.cards.html_value_card",
+        "type": "latest",
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "demo-device",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "fire",
+                  "type": "timeseries",
+                  "label": "fire",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "fire_event_count",
+                  "type": "timeseries",
+                  "label": "fire_event_count",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "fire_raw",
+                  "type": "timeseries",
+                  "label": "fire_raw",
+                  "color": "#168c91",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class=\"panel alarm-${fire}\"><div class=\"eyebrow\">CẢNH BÁO LỬA · GẦN NHẤT</div><h2><span class=\"normal\">Không báo lửa</span><span class=\"danger\">ĐANG BÁO LỬA</span><span class=\"unknown\">Chưa có dữ liệu</span></h2><div class=\"muted\">Số lần kích hoạt: <b>${fire_event_count:0}</b><br>Đầu vào kích hoạt: ${fire_raw}<br></div></div>",
+            "cardCss": ".panel{box-sizing:border-box;height:100%;padding:22px 26px;font-family:Roboto,Arial,sans-serif;overflow:auto;color:#152b43}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.6px;color:#168c91;margin-bottom:10px}.panel h1{font-size:28px;margin:0 0 8px;letter-spacing:-.6px}.panel h2{font-size:20px;margin:0 0 14px}.muted{color:#63758b;font-size:13px;line-height:1.65}.metric{font-size:36px;font-weight:600;margin:12px 0}.unit{font-size:16px;color:#63758b}.line{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px solid #e8edf3;font-size:14px}.line b{color:#152b43}code{display:block;background:#edf3f8;border-radius:8px;padding:10px 12px;margin:9px 0;font:13px monospace;white-space:pre-wrap;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:30px;background:#e4f5f2;color:#187b72;padding:5px 10px;font-size:12px}.alarm-true{background:#fff0ef!important;color:#b42318!important}.alarm-false{background:#e6f6f1!important;color:#187b72!important}.alarm-true .normal,.alarm-false .danger{display:none}.alarm- .normal,.alarm- .danger{display:none}.alarm-true .unknown,.alarm-false .unknown{display:none}"
+          },
+          "title": "Báo lửa",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef",
+            "border-radius": "16px"
+          },
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "actions": {},
+          "borderRadius": "16px"
+        },
+        "id": "1c6eb1a3-2f35-4f23-a45a-03de8a18b3fa",
+        "sizeX": 6,
+        "sizeY": 4
+      },
+      "840a40c4-f3bb-44f0-8b9f-3f14e5fc8adb": {
+        "typeFullFqn": "system.cards.html_value_card",
+        "type": "latest",
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "demo-device",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "active",
+                  "type": "attribute",
+                  "label": "active",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "csq",
+                  "type": "timeseries",
+                  "label": "csq",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "uptime_s",
+                  "type": "timeseries",
+                  "label": "uptime_s",
+                  "color": "#168c91",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class=\"panel\"><div class=\"eyebrow\">KẾT NỐI & THIẾT BỊ</div><div class=\"line\">ThingsBoard active<b>${active}</b></div><div class=\"line\">CSQ (0–31)<b>${csq:0}</b></div><div class=\"line\">Uptime (giây)<b>${uptime_s:0}</b></div><div class=\"muted\"></div></div>",
+            "cardCss": ".panel{box-sizing:border-box;height:100%;padding:22px 26px;font-family:Roboto,Arial,sans-serif;overflow:auto;color:#152b43}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.6px;color:#168c91;margin-bottom:10px}.panel h1{font-size:28px;margin:0 0 8px;letter-spacing:-.6px}.panel h2{font-size:20px;margin:0 0 14px}.muted{color:#63758b;font-size:13px;line-height:1.65}.metric{font-size:36px;font-weight:600;margin:12px 0}.unit{font-size:16px;color:#63758b}.line{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px solid #e8edf3;font-size:14px}.line b{color:#152b43}code{display:block;background:#edf3f8;border-radius:8px;padding:10px 12px;margin:9px 0;font:13px monospace;white-space:pre-wrap;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:30px;background:#e4f5f2;color:#187b72;padding:5px 10px;font-size:12px}.alarm-true{background:#fff0ef!important;color:#b42318!important}.alarm-false{background:#e6f6f1!important;color:#187b72!important}.alarm-true .normal,.alarm-false .danger{display:none}.alarm- .normal,.alarm- .danger{display:none}.alarm-true .unknown,.alarm-false .unknown{display:none}"
+          },
+          "title": "Kết nối",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef",
+            "border-radius": "16px"
+          },
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "actions": {},
+          "borderRadius": "16px"
+        },
+        "id": "840a40c4-f3bb-44f0-8b9f-3f14e5fc8adb",
+        "sizeX": 6,
+        "sizeY": 4
+      },
+      "a88d548b-cb34-4355-85fe-25d1a08e4db0": {
+        "typeFullFqn": "system.control_widgets.rpc_debug_terminal",
+        "type": "rpc",
+        "config": {
+          "targetDeviceAliases": [
+            "ee4acebc-13a5-4287-9f5c-27fc70876848"
+          ],
+          "showTitle": true,
+          "backgroundColor": "#13263b",
+          "color": "#edf6ff",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 60000,
+            "requestPersistent": false,
+            "persistentPollingInterval": 5000
+          },
+          "title": "01 / PHÁT THANH — nhập lệnh bên dưới",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {
+            "border-radius": "16px"
+          },
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 600,
+            "padding": "14px"
+          },
+          "showLegend": false,
+          "actions": {},
+          "borderRadius": "16px",
+          "datasources": [],
+          "targetDevice": {
+            "type": "device",
+            "deviceId": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        "id": "a88d548b-cb34-4355-85fe-25d1a08e4db0",
+        "sizeX": 14,
+        "sizeY": 7
+      },
+      "aff547ec-f5c8-499a-8132-edc8906f9343": {
+        "typeFullFqn": "system.cards.html_card",
+        "type": "static",
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class=\"panel\"><h2>Phát thanh</h2><p>Dùng widget Văn bản &amp; MP3 ở cuối dashboard. Nhấn ▶ để nhập đoạn dài hoặc chọn MP3 từ máy tính.</p><p>Terminal bên cạnh dành cho lệnh ngắn: speak, stop, getStatus.</p><p>Âm lượng 0–100% là thang tín hiệu số, không phải phần trăm công suất loa.</p></div>",
+            "cardCss": ".panel{box-sizing:border-box;height:100%;padding:22px 26px;font-family:Roboto,Arial,sans-serif;overflow:auto;color:#152b43}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.6px;color:#168c91;margin-bottom:10px}.panel h1{font-size:28px;margin:0 0 8px;letter-spacing:-.6px}.panel h2{font-size:20px;margin:0 0 14px}.muted{color:#63758b;font-size:13px;line-height:1.65}.metric{font-size:36px;font-weight:600;margin:12px 0}.unit{font-size:16px;color:#63758b}.line{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px solid #e8edf3;font-size:14px}.line b{color:#152b43}code{display:block;background:#edf3f8;border-radius:8px;padding:10px 12px;margin:9px 0;font:13px monospace;white-space:pre-wrap;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:30px;background:#e4f5f2;color:#187b72;padding:5px 10px;font-size:12px}.alarm-true{background:#fff0ef!important;color:#b42318!important}.alarm-false{background:#e6f6f1!important;color:#187b72!important}.alarm-true .normal,.alarm-false .danger{display:none}.alarm- .normal,.alarm- .danger{display:none}.alarm-true .unknown,.alarm-false .unknown{display:none}"
+          },
+          "title": "Cách phát thanh",
+          "dropShadow": false,
+          "borderRadius": "16px",
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef",
+            "border-radius": "16px"
+          },
+          "actions": {}
+        },
+        "id": "aff547ec-f5c8-499a-8132-edc8906f9343",
+        "sizeX": 10,
+        "sizeY": 7
+      },
+      "61927511-a847-47e8-bb84-d88887f3cb20": {
+        "typeFullFqn": "system.time_series_chart",
+        "type": "timeseries",
+        "sizeX": 12,
+        "sizeY": 6,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "Nhiệt độ",
+                  "color": "#EF5350",
+                  "settings": {
+                    "yAxisId": "default",
+                    "showInLegend": true,
+                    "dataHiddenByDefault": false,
+                    "type": "line",
+                    "lineSettings": {
+                      "showLine": true,
+                      "step": false,
+                      "stepType": "start",
+                      "smooth": false,
+                      "lineType": "solid",
+                      "lineWidth": 2.5,
+                      "showPoints": false,
+                      "showPointLabel": false,
+                      "pointLabelPosition": "top",
+                      "pointLabelFont": {
+                        "family": "Roboto",
+                        "size": 11,
+                        "sizeUnit": "px",
+                        "style": "normal",
+                        "weight": "400",
+                        "lineHeight": "1"
+                      },
+                      "pointLabelColor": "rgba(0, 0, 0, 0.76)",
+                      "pointShape": "circle",
+                      "pointSize": 14,
+                      "fillAreaSettings": {
+                        "type": "gradient",
+                        "opacity": 0.4,
+                        "gradient": {
+                          "start": 60,
+                          "end": 10
+                        }
+                      }
+                    },
+                    "barSettings": {
+                      "showBorder": false,
+                      "borderWidth": 2,
+                      "borderRadius": 0,
+                      "showLabel": false,
+                      "labelPosition": "top",
+                      "labelFont": {
+                        "family": "Roboto",
+                        "size": 11,
+                        "sizeUnit": "px",
+                        "style": "normal",
+                        "weight": "400",
+                        "lineHeight": "1"
+                      },
+                      "labelColor": "rgba(0, 0, 0, 0.76)",
+                      "backgroundSettings": {
+                        "type": "none",
+                        "opacity": 0.4,
+                        "gradient": {
+                          "start": 100,
+                          "end": 0
+                        }
+                      }
+                    }
+                  },
+                  "units": "°C",
+                  "decimals": 1,
+                  "aggregationType": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              },
+              "latestDataKeys": []
+            }
+          ],
+          "timewindow": {
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 3600000,
+              "quickInterval": "CURRENT_DAY",
+              "interval": 30000
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 1000
+            },
+            "timezone": null
+          },
+          "showTitle": true,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "showLegend": true,
+            "legendConfig": {
+              "direction": "column",
+              "position": "bottom",
+              "sortDataKeys": false,
+              "showMin": true,
+              "showMax": true,
+              "showAvg": true,
+              "showTotal": false,
+              "showLatest": false
+            },
+            "thresholds": [],
+            "dataZoom": true,
+            "stack": false,
+            "yAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "left",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)"
+            },
+            "xAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "bottom",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 10,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)",
+              "ticksFormat": {}
+            },
+            "legendLabelFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "legendLabelColor": "rgba(0, 0, 0, 0.76)",
+            "showTooltip": true,
+            "tooltipTrigger": "axis",
+            "tooltipValueFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500",
+              "lineHeight": "16px"
+            },
+            "tooltipValueColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipShowDate": true,
+            "tooltipDateFormat": {
+              "format": "MMM dd yyyy HH:mm",
+              "lastUpdateAgo": false,
+              "custom": false,
+              "auto": true,
+              "autoDateFormatSettings": {}
+            },
+            "tooltipDateFont": {
+              "family": "Roboto",
+              "size": 11,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "tooltipDateColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipDateInterval": false,
+            "tooltipBackgroundColor": "rgba(255, 255, 255, 0.76)",
+            "tooltipBackgroundBlur": 4,
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "yAxes": {
+              "default": {
+                "units": "°C",
+                "decimals": 0,
+                "show": true,
+                "label": "",
+                "labelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "600",
+                  "lineHeight": "1"
+                },
+                "labelColor": "rgba(0, 0, 0, 0.54)",
+                "position": "left",
+                "showTickLabels": true,
+                "tickLabelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "400",
+                  "lineHeight": "1"
+                },
+                "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+                "ticksFormatter": null,
+                "showTicks": true,
+                "ticksColor": "rgba(0, 0, 0, 0.54)",
+                "showLine": true,
+                "lineColor": "rgba(0, 0, 0, 0.54)",
+                "showSplitLines": true,
+                "splitLinesColor": "rgba(0, 0, 0, 0.12)",
+                "id": "default",
+                "order": 0
+              }
+            },
+            "noAggregationBarWidthSettings": {
+              "strategy": "group",
+              "groupWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              },
+              "barWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              }
+            },
+            "animation": {
+              "animation": false,
+              "animationThreshold": 2000,
+              "animationDuration": 500,
+              "animationEasing": "cubicOut",
+              "animationDelay": 0,
+              "animationDurationUpdate": 300,
+              "animationEasingUpdate": "cubicOut",
+              "animationDelayUpdate": 0
+            },
+            "padding": "12px"
+          },
+          "title": "02 / Nhiệt độ — 1 giờ gần nhất",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": null,
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "thermostat",
+          "iconColor": "#1F6BDD",
+          "useDashboardTimewindow": false,
+          "displayTimewindow": true,
+          "titleFont": {
+            "size": 16,
+            "sizeUnit": "px",
+            "family": "Roboto",
+            "weight": "500",
+            "style": "normal",
+            "lineHeight": "24px"
+          },
+          "titleColor": "rgba(0, 0, 0, 0.87)",
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "units": "",
+          "decimals": null,
+          "noDataDisplayMessage": "",
+          "timewindowStyle": {
+            "showIcon": false,
+            "iconSize": "24px",
+            "icon": null,
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": "Roboto",
+              "weight": "400",
+              "style": "normal",
+              "lineHeight": "16px"
+            },
+            "color": "rgba(0, 0, 0, 0.38)",
+            "displayTypePrefix": true
+          },
+          "margin": "0px",
+          "borderRadius": "16px",
+          "iconSize": "0px"
+        },
+        "row": 0,
+        "col": 0,
+        "id": "61927511-a847-47e8-bb84-d88887f3cb20"
+      },
+      "31b52720-bf92-4a63-943a-7f13af85a552": {
+        "typeFullFqn": "system.time_series_chart",
+        "type": "timeseries",
+        "sizeX": 12,
+        "sizeY": 6,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "Độ ẩm",
+                  "color": "#2196F3",
+                  "settings": {
+                    "yAxisId": "default",
+                    "showInLegend": true,
+                    "dataHiddenByDefault": false,
+                    "type": "line",
+                    "lineSettings": {
+                      "showLine": true,
+                      "step": false,
+                      "stepType": "start",
+                      "smooth": false,
+                      "lineType": "solid",
+                      "lineWidth": 2.5,
+                      "showPoints": false,
+                      "showPointLabel": false,
+                      "pointLabelPosition": "top",
+                      "pointLabelFont": {
+                        "family": "Roboto",
+                        "size": 11,
+                        "sizeUnit": "px",
+                        "style": "normal",
+                        "weight": "400",
+                        "lineHeight": "1"
+                      },
+                      "pointLabelColor": "rgba(0, 0, 0, 0.76)",
+                      "pointShape": "circle",
+                      "pointSize": 14,
+                      "fillAreaSettings": {
+                        "type": "gradient",
+                        "opacity": 0.4,
+                        "gradient": {
+                          "start": 60,
+                          "end": 10
+                        }
+                      }
+                    },
+                    "barSettings": {
+                      "showBorder": false,
+                      "borderWidth": 2,
+                      "borderRadius": 0,
+                      "showLabel": false,
+                      "labelPosition": "top",
+                      "labelFont": {
+                        "family": "Roboto",
+                        "size": 11,
+                        "sizeUnit": "px",
+                        "style": "normal",
+                        "weight": "400",
+                        "lineHeight": "1"
+                      },
+                      "labelColor": "rgba(0, 0, 0, 0.76)",
+                      "backgroundSettings": {
+                        "type": "none",
+                        "opacity": 0.4,
+                        "gradient": {
+                          "start": 100,
+                          "end": 0
+                        }
+                      }
+                    }
+                  },
+                  "units": "%",
+                  "decimals": 0,
+                  "aggregationType": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              },
+              "latestDataKeys": []
+            }
+          ],
+          "timewindow": {
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 3600000,
+              "quickInterval": "CURRENT_DAY",
+              "interval": 30000
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 1000
+            },
+            "timezone": null
+          },
+          "showTitle": true,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "showLegend": true,
+            "legendConfig": {
+              "direction": "column",
+              "position": "bottom",
+              "sortDataKeys": false,
+              "showMin": true,
+              "showMax": true,
+              "showAvg": true,
+              "showTotal": false,
+              "showLatest": false
+            },
+            "thresholds": [],
+            "dataZoom": true,
+            "stack": false,
+            "yAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "left",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)"
+            },
+            "xAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "bottom",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 10,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)",
+              "ticksFormat": {}
+            },
+            "legendLabelFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "legendLabelColor": "rgba(0, 0, 0, 0.76)",
+            "showTooltip": true,
+            "tooltipTrigger": "axis",
+            "tooltipValueFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500",
+              "lineHeight": "16px"
+            },
+            "tooltipValueColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipShowDate": true,
+            "tooltipDateFormat": {
+              "format": null,
+              "lastUpdateAgo": false,
+              "custom": false,
+              "auto": true,
+              "autoDateFormatSettings": {}
+            },
+            "tooltipDateFont": {
+              "family": "Roboto",
+              "size": 11,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "tooltipDateColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipDateInterval": false,
+            "tooltipBackgroundColor": "rgba(255, 255, 255, 0.76)",
+            "tooltipBackgroundBlur": 4,
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "yAxes": {
+              "default": {
+                "units": "%",
+                "decimals": 0,
+                "show": true,
+                "label": "",
+                "labelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "600",
+                  "lineHeight": "1"
+                },
+                "labelColor": "rgba(0, 0, 0, 0.54)",
+                "position": "left",
+                "showTickLabels": true,
+                "tickLabelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "400",
+                  "lineHeight": "1"
+                },
+                "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+                "ticksFormatter": null,
+                "showTicks": true,
+                "ticksColor": "rgba(0, 0, 0, 0.54)",
+                "showLine": true,
+                "lineColor": "rgba(0, 0, 0, 0.54)",
+                "showSplitLines": true,
+                "splitLinesColor": "rgba(0, 0, 0, 0.12)",
+                "id": "default",
+                "order": 0
+              }
+            },
+            "noAggregationBarWidthSettings": {
+              "strategy": "group",
+              "groupWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              },
+              "barWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              }
+            },
+            "animation": {
+              "animation": false,
+              "animationThreshold": 2000,
+              "animationDuration": 500,
+              "animationEasing": "cubicOut",
+              "animationDelay": 0,
+              "animationDurationUpdate": 300,
+              "animationEasingUpdate": "cubicOut",
+              "animationDelayUpdate": 0
+            },
+            "padding": "12px"
+          },
+          "title": "02 / Độ ẩm — 1 giờ gần nhất",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": null,
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "thermostat",
+          "iconColor": "#1F6BDD",
+          "useDashboardTimewindow": false,
+          "displayTimewindow": true,
+          "titleFont": {
+            "size": 16,
+            "sizeUnit": "px",
+            "family": "Roboto",
+            "weight": "500",
+            "style": "normal",
+            "lineHeight": "24px"
+          },
+          "titleColor": "rgba(0, 0, 0, 0.87)",
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "units": "",
+          "decimals": null,
+          "noDataDisplayMessage": "",
+          "timewindowStyle": {
+            "showIcon": false,
+            "iconSize": "24px",
+            "icon": null,
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": "Roboto",
+              "weight": "400",
+              "style": "normal",
+              "lineHeight": "16px"
+            },
+            "color": "rgba(0, 0, 0, 0.38)",
+            "displayTypePrefix": true
+          },
+          "margin": "0px",
+          "borderRadius": "16px",
+          "iconSize": "0px"
+        },
+        "row": 0,
+        "col": 0,
+        "id": "31b52720-bf92-4a63-943a-7f13af85a552"
+      },
+      "9e98fec9-89d7-4b73-830f-6b5e5db54bf9": {
+        "typeFullFqn": "system.cards.html_value_card",
+        "type": "latest",
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "demo-device",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "audio_ok",
+                  "type": "timeseries",
+                  "label": "audio_ok",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "tts_last_http",
+                  "type": "timeseries",
+                  "label": "tts_last_http",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "tts_downloads",
+                  "type": "timeseries",
+                  "label": "tts_downloads",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "tts_failures",
+                  "type": "timeseries",
+                  "label": "tts_failures",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "speech_played",
+                  "type": "timeseries",
+                  "label": "speech_played",
+                  "color": "#168c91",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class=\"panel\"><div class=\"eyebrow\">03 / ÂM THANH & TTS</div><div class=\"line\">I2S khởi tạo<b>${audio_ok}</b></div><div class=\"line\">Mã tải TTS gần nhất<b>${tts_last_http:0}</b></div><div class=\"line\">Tải thành công / thất bại<b>${tts_downloads:0} / ${tts_failures:0}</b></div><div class=\"line\">Lượt phát theo firmware<b>${speech_played:0}</b></div><div class=\"muted\"></div></div>",
+            "cardCss": ".panel{box-sizing:border-box;height:100%;padding:22px 26px;font-family:Roboto,Arial,sans-serif;overflow:auto;color:#152b43}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.6px;color:#168c91;margin-bottom:10px}.panel h1{font-size:28px;margin:0 0 8px;letter-spacing:-.6px}.panel h2{font-size:20px;margin:0 0 14px}.muted{color:#63758b;font-size:13px;line-height:1.65}.metric{font-size:36px;font-weight:600;margin:12px 0}.unit{font-size:16px;color:#63758b}.line{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px solid #e8edf3;font-size:14px}.line b{color:#152b43}code{display:block;background:#edf3f8;border-radius:8px;padding:10px 12px;margin:9px 0;font:13px monospace;white-space:pre-wrap;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:30px;background:#e4f5f2;color:#187b72;padding:5px 10px;font-size:12px}.alarm-true{background:#fff0ef!important;color:#b42318!important}.alarm-false{background:#e6f6f1!important;color:#187b72!important}.alarm-true .normal,.alarm-false .danger{display:none}.alarm- .normal,.alarm- .danger{display:none}.alarm-true .unknown,.alarm-false .unknown{display:none}"
+          },
+          "title": "Chẩn đoán âm thanh",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef",
+            "border-radius": "16px"
+          },
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "actions": {},
+          "borderRadius": "16px"
+        },
+        "id": "9e98fec9-89d7-4b73-830f-6b5e5db54bf9",
+        "sizeX": 8,
+        "sizeY": 5
+      },
+      "2063100d-0c03-4317-a1e1-74f02c423966": {
+        "typeFullFqn": "system.cards.html_value_card",
+        "type": "latest",
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "demo-device",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "sht_ok",
+                  "type": "timeseries",
+                  "label": "sht_ok",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "send_ok",
+                  "type": "timeseries",
+                  "label": "send_ok",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "send_fail",
+                  "type": "timeseries",
+                  "label": "send_fail",
+                  "color": "#168c91",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class=\"panel\"><div class=\"eyebrow\">04 / CẢM BIẾN & TRUYỀN DỮ LIỆU</div><div class=\"line\">SHT31 hợp lệ<b>${sht_ok}</b></div><div class=\"line\">Gửi thành công<b>${send_ok:0}</b></div><div class=\"line\">Gửi thất bại<b>${send_fail:0}</b></div><div class=\"muted\"></div></div>",
+            "cardCss": ".panel{box-sizing:border-box;height:100%;padding:22px 26px;font-family:Roboto,Arial,sans-serif;overflow:auto;color:#152b43}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.6px;color:#168c91;margin-bottom:10px}.panel h1{font-size:28px;margin:0 0 8px;letter-spacing:-.6px}.panel h2{font-size:20px;margin:0 0 14px}.muted{color:#63758b;font-size:13px;line-height:1.65}.metric{font-size:36px;font-weight:600;margin:12px 0}.unit{font-size:16px;color:#63758b}.line{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px solid #e8edf3;font-size:14px}.line b{color:#152b43}code{display:block;background:#edf3f8;border-radius:8px;padding:10px 12px;margin:9px 0;font:13px monospace;white-space:pre-wrap;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:30px;background:#e4f5f2;color:#187b72;padding:5px 10px;font-size:12px}.alarm-true{background:#fff0ef!important;color:#b42318!important}.alarm-false{background:#e6f6f1!important;color:#187b72!important}.alarm-true .normal,.alarm-false .danger{display:none}.alarm- .normal,.alarm- .danger{display:none}.alarm-true .unknown,.alarm-false .unknown{display:none}"
+          },
+          "title": "Chẩn đoán cảm biến",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef",
+            "border-radius": "16px"
+          },
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "actions": {},
+          "borderRadius": "16px"
+        },
+        "id": "2063100d-0c03-4317-a1e1-74f02c423966",
+        "sizeX": 8,
+        "sizeY": 5
+      },
+      "8bb4842f-29f4-4b99-babc-d1004ce45586": {
+        "typeFullFqn": "system.cards.html_value_card",
+        "type": "latest",
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": "demo-device",
+              "entityAliasId": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+              "dataKeys": [
+                {
+                  "name": "volume_permille",
+                  "type": "timeseries",
+                  "label": "volume_permille",
+                  "color": "#168c91",
+                  "settings": {}
+                },
+                {
+                  "name": "announce_interval_s",
+                  "type": "timeseries",
+                  "label": "announce_interval_s",
+                  "color": "#168c91",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class=\"panel\"><div class=\"eyebrow\">05 / CẤU HÌNH PHÁT THANH</div><div class=\"line\">Âm lượng (‰)<b>${volume_permille:0}</b></div><div class=\"line\">Chu kỳ (giây)<b>${announce_interval_s:0}</b></div><div class=\"muted\"></div><code></code><div class=\"muted\"> </div></div>",
+            "cardCss": ".panel{box-sizing:border-box;height:100%;padding:22px 26px;font-family:Roboto,Arial,sans-serif;overflow:auto;color:#152b43}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.6px;color:#168c91;margin-bottom:10px}.panel h1{font-size:28px;margin:0 0 8px;letter-spacing:-.6px}.panel h2{font-size:20px;margin:0 0 14px}.muted{color:#63758b;font-size:13px;line-height:1.65}.metric{font-size:36px;font-weight:600;margin:12px 0}.unit{font-size:16px;color:#63758b}.line{display:flex;justify-content:space-between;gap:18px;padding:9px 0;border-bottom:1px solid #e8edf3;font-size:14px}.line b{color:#152b43}code{display:block;background:#edf3f8;border-radius:8px;padding:10px 12px;margin:9px 0;font:13px monospace;white-space:pre-wrap;overflow-wrap:anywhere}.badge{display:inline-block;border-radius:30px;background:#e4f5f2;color:#187b72;padding:5px 10px;font-size:12px}.alarm-true{background:#fff0ef!important;color:#b42318!important}.alarm-false{background:#e6f6f1!important;color:#187b72!important}.alarm-true .normal,.alarm-false .danger{display:none}.alarm- .normal,.alarm- .danger{display:none}.alarm-true .unknown,.alarm-false .unknown{display:none}"
+          },
+          "title": "Cấu hình",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef",
+            "border-radius": "16px"
+          },
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "actions": {},
+          "borderRadius": "16px"
+        },
+        "id": "8bb4842f-29f4-4b99-babc-d1004ce45586",
+        "sizeX": 8,
+        "sizeY": 5
+      },
+      "71da3703-2994-4ed8-8165-cf34aa233beb": {
+        "typeFullFqn": "system.cards.html_card",
+        "type": "static",
+        "config": {
+          "datasources": [],
+          "showTitle": true,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "controlDeviceId": "00000000-0000-0000-0000-000000000000",
+            "cardHtml": "<div class=\"panel\"><h2>Văn bản &amp; file MP3</h2><p>Nhấn nút ▶ trên tiêu đề để nhập văn bản hoặc chọn file MP3 từ máy tính.</p><p>Gửi trực tiếp qua ThingsBoard. Giới hạn được đọc từ ESP32; không cần cài thêm chương trình trên máy.</p><p>Nhận đủ dữ liệu, kiểm tra CRC rồi mới phát. Có tiến độ và nút dừng.</p></div>",
+            "cardCss": ".panel{padding:24px;color:#19334b;font:15px/1.6 Arial,sans-serif}.panel h2{margin-top:0}"
+          },
+          "title": "PHÁT THANH · Văn bản & MP3",
+          "dropShadow": false,
+          "borderRadius": "16px",
+          "widgetStyle": {
+            "border": "1px solid #e0e7ef",
+            "border-radius": "16px"
+          },
+          "actions": {
+            "headerButton": [
+              {
+                "id": "15143951-fb3e-4ece-a088-c604d0f88627",
+                "name": "Mở bảng điều khiển",
+                "icon": "play_circle",
+                "type": "custom",
+                "customFunction": "const HTML_TEMPLATE=\"<div style=\\\"width:min(720px,92vw);max-height:85vh;overflow:auto;padding:24px;box-sizing:border-box;font:14px/1.6 Arial,sans-serif;color:#19334b\\\">\\n<h2 style=\\\"margin:0\\\">Văn bản &amp; MP3</h2>\\n<p>Gửi trực tiếp qua ThingsBoard → ESP32. Nhận đủ và kiểm tra dữ liệu trước khi phát.</p>\\n<div style=\\\"padding:12px;background:#edf5f7;border-radius:8px\\\">{{limitsLabel}}</div>\\n<h3>1. Nhập văn bản</h3>\\n<textarea style=\\\"width:100%;box-sizing:border-box;padding:12px\\\" rows=\\\"7\\\" [disabled]=\\\"busy\\\" [value]=\\\"text\\\" (input)=\\\"setText($event.target.value)\\\" placeholder=\\\"Nhập nội dung tiếng Việt…\\\"></textarea>\\n<p>{{textBytes}} byte UTF-8 / {{textLimit}} byte hiện khả dụng</p>\\n<button mat-raised-button color=\\\"primary\\\" [disabled]=\\\"busy || !ready\\\" (click)=\\\"speak()\\\">Gửi và đọc văn bản</button>\\n<h3>2. Chọn file MP3</h3>\\n<input type=\\\"file\\\" accept=\\\".mp3,audio/mpeg\\\" [disabled]=\\\"busy\\\" (change)=\\\"chooseFile($event)\\\">\\n<p>{{fileLabel}}</p>\\n<button mat-raised-button color=\\\"primary\\\" [disabled]=\\\"busy || !ready || !file\\\" (click)=\\\"uploadMP3()\\\">Gửi và phát MP3</button>\\n<p style=\\\"color:#65788a\\\">Giữ cửa sổ này mở đến khi gửi xong. File lớn có thể mất nhiều phút; thời gian phụ thuộc mạng và hạn mức ThingsBoard.</p>\\n<progress style=\\\"width:100%\\\" max=\\\"100\\\" [value]=\\\"progress\\\"></progress>\\n<p style=\\\"white-space:pre-wrap;overflow-wrap:anywhere;background:#edf5f7;padding:12px;border-radius:8px\\\">{{status}}</p>\\n<button mat-stroked-button [disabled]=\\\"busy\\\" (click)=\\\"refresh()\\\">Đọc trạng thái / giới hạn</button>\\n<button mat-raised-button color=\\\"warn\\\" (click)=\\\"stop()\\\">Dừng phát / hủy gửi</button>\\n<hr style=\\\"margin:20px 0\\\">\\n<label>Âm lượng: <b>{{volume}}%</b></label>\\n<input style=\\\"width:100%\\\" type=\\\"range\\\" min=\\\"0\\\" max=\\\"100\\\" step=\\\"1\\\" [value]=\\\"volume\\\" (input)=\\\"volumeChange($event.target.value)\\\">\\n<p>{{volumeState}}</p>\\n<p style=\\\"font-size:12px\\\">100% là mức tín hiệu số; chưa hiệu chỉnh theo ngưỡng méo ampli. Báo lửa vẫn ưu tiên.</p>\\n<button mat-button [disabled]=\\\"busy\\\" (click)=\\\"close()\\\">Đóng</button>\\n</div>\\n\";\nconst injector=widgetContext.$scope.$injector;\nconst customDialog=injector.get(widgetContext.servicesMap.get('customDialog'));\nconst device=widgetContext.settings.controlDeviceId;\nif(!device)throw new Error('Thiếu settings.controlDeviceId.');\ncustomDialog.customDialog(HTML_TEMPLATE,function(vm){\n  vm.text='';vm.textBytes=0;vm.textLimit=0;vm.fileLimit=0;vm.file=null;vm.fileLabel='Chưa chọn file';\n  vm.busy=false;vm.ready=false;vm.progress=0;vm.status='Đang đọc cấu hình ESP32…';\n  vm.limitsLabel='Chưa nhận được giới hạn từ thiết bị';vm.volume=100;vm.volumeState='Chưa xác nhận';\n  const sessions=new Map();\n  const encoder=new TextEncoder();let closed=false,operation=0,activeID=null,debounce=null,volumeBusy=false,latestVolume=null;\n  const redraw=()=>widgetContext.detectChanges();\n  const show=s=>{if(!closed){vm.status=s;redraw();}};\n  const errorText=e=>e.message||e.error?.message||('HTTP '+(e.status||'?')+' — kiểm tra kết nối và quyền ThingsBoard.');\n  const wait=ms=>new Promise(r=>setTimeout(r,ms));\n  function rpc(method,params){return new Promise((resolve,reject)=>{\n    widgetContext.http.post('/api/rpc/twoway/'+device,{method,params,timeout:60000,persistent:false})\n      .subscribe({next:resolve,error:reject});\n  });}\n  function crc32(bytes){let crc=0xffffffff;for(const x of bytes){crc^=x;for(let b=0;b<8;b++)crc=(crc>>>1)^((crc&1)?0xedb88320:0);}return (crc^0xffffffff)>>>0;}\n  function b64(bytes){let s='';for(const x of bytes)s+=String.fromCharCode(x);return btoa(s);}\n  function check(token){if(closed||token!==operation)throw new Error('Đã hủy gửi.');}\n  async function accepted(method,params,token){\n    for(let attempt=0;attempt<3;attempt++){\n      check(token);let r;\n      try{r=await rpc(method,params);}catch(e){\n        if(attempt===2)throw e;show('Chưa nhận phản hồi; thử lại đúng gói đang gửi…');await wait(1000*(attempt+1));continue;\n      }\n      check(token);\n      if(r?.accepted)return r;\n      if(r?.status?.includes('queue_busy')&&attempt<2){await wait(1000);continue;}\n      throw new Error('Thiết bị từ chối: '+(r?.status||'kiểm tra báo lửa, bộ nhớ hoặc phiên truyền khác'));\n    }\n  }\n  function applyStatus(s){\n    if(s.firmware!=='school-node-text-mp3-v2')throw new Error('Cần nạp firmware text-mp3-v2 cùng bộ file này.');\n    vm.textLimit=Number(s.text_max_bytes)||0;vm.fileLimit=Number(s.mp3_max_bytes)||0;\n    vm.chunkSize=Math.min(1536,Number(s.upload_chunk_bytes)||1536);\n    vm.ready=!s.fire&&!s.upload_active&&!s.media_active;\n    vm.limitsLabel='Văn bản: '+vm.textLimit.toLocaleString()+' byte | MP3: '+(vm.fileLimit/1024).toFixed(0)+' KiB | PSRAM: '+(Number(s.psram_bytes||0)/1048576).toFixed(1)+' MiB';\n    if(!volumeBusy&&latestVolume===null){vm.volume=Math.round(s.volume_permille/10);vm.volumeState='Thiết bị xác nhận: '+vm.volume+'%';}\n    return s;\n  }\n  vm.refresh=async()=>{try{const s=applyStatus(await rpc('getStatus',{}));if(closed)return;\n    const state=['nghỉ','đã xếp hàng','đang phát','phát xong','lỗi phát'][s.playback_state]||'không rõ';\n    show('MP3: '+state+' | Báo lửa: '+s.fire+' | I2S: '+(s.audio_ok?'OK':'lỗi')+\n      (s.upload_active?' | Đang nhận '+s.upload_received+'/'+s.upload_total+' byte':'')+\n      (s.tts_last_http?' | HTTP TTS gần nhất: '+s.tts_last_http:''));\n  }catch(e){vm.ready=false;show(errorText(e));}};\n  vm.setText=t=>{vm.text=t;vm.textBytes=encoder.encode(t.trim()).length;};\n  vm.chooseFile=e=>{vm.file=e.target.files[0]||null;vm.fileLabel=vm.file?(vm.file.name+' — '+vm.file.size.toLocaleString()+' byte'):'Chưa chọn file';};\n  async function sendBytes(kind,bytes,token){\n    check(token);const s=applyStatus(await rpc('getStatus',{}));check(token);\n    const limit=kind==='text'?vm.textLimit:vm.fileLimit;\n    if(!vm.ready)throw new Error('Thiết bị đang phát MP3, nhận file khác hoặc báo lửa. Dừng rồi thử lại.');\n    if(!bytes.length||bytes.length>limit)throw new Error('Dung lượng '+bytes.length+' byte vượt mức hiện khả dụng '+limit+' byte, hoặc nội dung rỗng.');\n    const id=crypto.randomUUID();activeID=id;sessions.set(token,id);const crc=crc32(bytes);const started=Date.now();\n    await accepted('beginUpload',{id,kind,bytes:bytes.length,crc32:crc},token);\n    let offset=0;\n    while(offset<bytes.length){\n      check(token);const chunk=bytes.subarray(offset,Math.min(bytes.length,offset+vm.chunkSize));\n      const r=await accepted('uploadChunk',{id,offset,data:b64(chunk)},token);\n      offset+=chunk.length;if(r.offset!==offset)throw new Error('Offset phản hồi không khớp; đã dừng để tránh dữ liệu sai.');\n      vm.progress=Math.floor(offset*100/bytes.length);\n      const elapsed=Math.max(1,(Date.now()-started)/1000),eta=Math.ceil((bytes.length-offset)/(offset/elapsed));\n      show('Thiết bị đã nhận '+offset.toLocaleString()+'/'+bytes.length.toLocaleString()+' byte ('+vm.progress+'%). Còn khoảng '+eta+' giây theo tốc độ hiện tại.');\n    }\n    await accepted('commitUpload',{id},token);sessions.delete(token);if(activeID===id)activeID=null;\n    show('ESP32 đã nhận đủ, CRC32 khớp và đã xếp hàng '+(kind==='mp3'?'phát MP3. Có thể đóng cửa sổ.':'đọc văn bản. Việc tạo giọng nói vẫn cần Internet.'));\n  }\n  async function start(kind){\n    if(vm.busy)return;vm.busy=true;vm.progress=0;const token=++operation;\n    try{\n      let bytes;\n      if(kind==='text'){\n        if(vm.text.includes('\\u0000'))throw new Error('Văn bản chứa ký tự NUL không hợp lệ.');\n        bytes=encoder.encode(vm.text.trim());\n      }else{\n        const file=vm.file;if(!file||!file.name.toLowerCase().endsWith('.mp3'))throw new Error('Chọn file có định dạng MP3.');\n         \n        if(file.size>2097152)throw new Error('File vượt trần 2 MiB của bản firmware này.');\n        bytes=new Uint8Array(await file.arrayBuffer());check(token);\n      }\n      await sendBytes(kind,bytes,token);\n    }catch(e){\n      const id=sessions.get(token);\n      if(id){try{await rpc('cancelUpload',{id});}catch(_){}if(activeID===id)activeID=null;}\n      if(token===operation)show(errorText(e));\n    }finally{sessions.delete(token);if(token===operation){vm.busy=false;vm.ready=true;}redraw();}\n  }\n  vm.speak=()=>start('text');vm.uploadMP3=()=>start('mp3');\n  vm.stop=async()=>{operation++;vm.busy=true;show('Đang gửi lệnh dừng…');\n    try{const r=await rpc('stop',{});activeID=null;show(r.stopped?'ESP32 xác nhận dừng và hủy dữ liệu đang gửi. Báo lửa vẫn ưu tiên.':'Chưa xác nhận dừng.');}\n    catch(e){show(errorText(e));}finally{vm.busy=false;vm.ready=true;redraw();}};\n  async function sendVolume(){\n    if(closed||volumeBusy||latestVolume===null)return;\n    volumeBusy=true;const wanted=latestVolume;latestVolume=null;vm.volumeState='Đang gửi '+wanted+'%…';redraw();\n    try{const r=await rpc('setVolume',wanted);if(r!==wanted)throw new Error('Chưa xác nhận mức âm lượng.');vm.volumeState='Thiết bị xác nhận: '+r+'%';}\n    catch(e){vm.volumeState=errorText(e);}finally{volumeBusy=false;redraw();if(latestVolume!==null)sendVolume();}\n  }\n  vm.volumeChange=v=>{vm.volume=Math.max(0,Math.min(100,Math.round(Number(v))));latestVolume=vm.volume;clearTimeout(debounce);debounce=setTimeout(sendVolume,350);};\n  vm.close=()=>{if(!vm.busy)vm.dialogRef.close(null);};\n  vm.dialogRef.afterClosed().subscribe(()=>{closed=true;operation++;clearTimeout(debounce);if(activeID)rpc('cancelUpload',{id:activeID}).catch(()=>{});});\n  vm.refresh();\n}).subscribe();\n",
+                "useShowWidgetActionFunction": false,
+                "showWidgetActionFunction": "return true;"
+              }
+            ]
+          }
+        },
+        "id": "71da3703-2994-4ed8-8165-cf34aa233beb",
+        "sizeX": 16,
+        "sizeY": 7
+      },
+      "b2f2cf90-d33c-4cf2-9b18-62a0b6ff1a17": {
+        "id": "b2f2cf90-d33c-4cf2-9b18-62a0b6ff1a17",
+        "typeFullFqn": "system.control_widgets.knob_control",
+        "type": "rpc",
+        "sizeX": 8,
+        "sizeY": 6,
+        "config": {
+          "showTitle": true,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 60000,
+            "maxValue": 100,
+            "initialValue": 100,
+            "minValue": 0,
+            "title": "Âm lượng (%)",
+            "getValueMethod": "getVolume",
+            "setValueMethod": "setVolume",
+            "requestPersistent": false
+          },
+          "title": "ÂM LƯỢNG · 0–100%",
+          "dropShadow": true,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 0,
+          "targetDevice": {
+            "type": "device",
+            "deviceId": "00000000-0000-0000-0000-000000000000"
+          },
+          "borderRadius": "16px"
+        },
+        "row": 25,
+        "col": 16
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Tổng quan",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "2bd69dbb-f04c-463f-bc6e-f808a5e4e9d1": {
+                "sizeX": 24,
+                "sizeY": 3,
+                "row": 0,
+                "col": 0,
+                "mobileOrder": 1,
+                "mobileHeight": 3
+              },
+              "26ad8b03-4b0c-4370-8e40-2528f73766b4": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 3,
+                "col": 0,
+                "mobileOrder": 2,
+                "mobileHeight": 4
+              },
+              "878cabac-be77-4f80-8204-9b573210c66b": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 3,
+                "col": 6,
+                "mobileOrder": 3,
+                "mobileHeight": 4
+              },
+              "1c6eb1a3-2f35-4f23-a45a-03de8a18b3fa": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 3,
+                "col": 12,
+                "mobileOrder": 4,
+                "mobileHeight": 4
+              },
+              "840a40c4-f3bb-44f0-8b9f-3f14e5fc8adb": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 3,
+                "col": 18,
+                "mobileOrder": 5,
+                "mobileHeight": 4
+              },
+              "a88d548b-cb34-4355-85fe-25d1a08e4db0": {
+                "sizeX": 14,
+                "sizeY": 7,
+                "row": 7,
+                "col": 0,
+                "mobileOrder": 6,
+                "mobileHeight": 7
+              },
+              "aff547ec-f5c8-499a-8132-edc8906f9343": {
+                "sizeX": 10,
+                "sizeY": 7,
+                "row": 7,
+                "col": 14,
+                "mobileOrder": 7,
+                "mobileHeight": 7
+              },
+              "61927511-a847-47e8-bb84-d88887f3cb20": {
+                "sizeX": 12,
+                "sizeY": 6,
+                "row": 14,
+                "col": 0,
+                "mobileOrder": 8,
+                "mobileHeight": 6
+              },
+              "31b52720-bf92-4a63-943a-7f13af85a552": {
+                "sizeX": 12,
+                "sizeY": 6,
+                "row": 14,
+                "col": 12,
+                "mobileOrder": 9,
+                "mobileHeight": 6
+              },
+              "9e98fec9-89d7-4b73-830f-6b5e5db54bf9": {
+                "sizeX": 8,
+                "sizeY": 5,
+                "row": 20,
+                "col": 0,
+                "mobileOrder": 10,
+                "mobileHeight": 5
+              },
+              "2063100d-0c03-4317-a1e1-74f02c423966": {
+                "sizeX": 8,
+                "sizeY": 5,
+                "row": 20,
+                "col": 8,
+                "mobileOrder": 11,
+                "mobileHeight": 5
+              },
+              "8bb4842f-29f4-4b99-babc-d1004ce45586": {
+                "sizeX": 8,
+                "sizeY": 5,
+                "row": 20,
+                "col": 16,
+                "mobileOrder": 12,
+                "mobileHeight": 5
+              },
+              "71da3703-2994-4ed8-8165-cf34aa233beb": {
+                "sizeX": 16,
+                "sizeY": 7,
+                "row": 25,
+                "col": 0,
+                "mobileOrder": 13,
+                "mobileHeight": 7
+              },
+              "b2f2cf90-d33c-4cf2-9b18-62a0b6ff1a17": {
+                "sizeX": 8,
+                "sizeY": 7,
+                "row": 25,
+                "col": 16,
+                "mobileOrder": 14,
+                "mobileHeight": 7
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#f3f6fa",
+              "color": "rgba(0,0,0,0.870588)",
+              "columns": 24,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70,
+              "margin": 12,
+              "outerMargin": true,
+              "layoutType": "default"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "ee4acebc-13a5-4287-9f5c-27fc70876848": {
+        "id": "ee4acebc-13a5-4287-9f5c-27fc70876848",
+        "alias": "School Node — demo-device",
+        "filter": {
+          "type": "entityName",
+          "resolveMultiple": false,
+          "entityType": "DEVICE",
+          "entityNameFilter": "demo-device"
+        }
+      }
+    },
+    "timewindow": {
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000
+      },
+      "aggregation": {
+        "type": "AVG"
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": true,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": false,
+      "showFilters": true,
+      "showUpdateDashboardImage": true,
+      "dashboardCss": ""
+    },
+    "filters": {}
+  },
+  "resources": []
+}

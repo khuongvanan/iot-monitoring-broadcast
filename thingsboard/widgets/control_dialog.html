@@ -1,0 +1,24 @@
+<div style="width:min(720px,92vw);max-height:85vh;overflow:auto;padding:24px;box-sizing:border-box;font:14px/1.6 Arial,sans-serif;color:#19334b">
+<h2 style="margin:0">Văn bản &amp; MP3</h2>
+<p>Gửi trực tiếp qua ThingsBoard → ESP32. Nhận đủ và kiểm tra dữ liệu trước khi phát.</p>
+<div style="padding:12px;background:#edf5f7;border-radius:8px">{{limitsLabel}}</div>
+<h3>1. Nhập văn bản</h3>
+<textarea style="width:100%;box-sizing:border-box;padding:12px" rows="7" [disabled]="busy" [value]="text" (input)="setText($event.target.value)" placeholder="Nhập nội dung tiếng Việt…"></textarea>
+<p>{{textBytes}} byte UTF-8 / {{textLimit}} byte hiện khả dụng</p>
+<button mat-raised-button color="primary" [disabled]="busy || !ready" (click)="speak()">Gửi và đọc văn bản</button>
+<h3>2. Chọn file MP3</h3>
+<input type="file" accept=".mp3,audio/mpeg" [disabled]="busy" (change)="chooseFile($event)">
+<p>{{fileLabel}}</p>
+<button mat-raised-button color="primary" [disabled]="busy || !ready || !file" (click)="uploadMP3()">Gửi và phát MP3</button>
+<p style="color:#65788a">Giữ cửa sổ này mở đến khi gửi xong. File lớn có thể mất nhiều phút; thời gian phụ thuộc mạng và hạn mức ThingsBoard.</p>
+<progress style="width:100%" max="100" [value]="progress"></progress>
+<p style="white-space:pre-wrap;overflow-wrap:anywhere;background:#edf5f7;padding:12px;border-radius:8px">{{status}}</p>
+<button mat-stroked-button [disabled]="busy" (click)="refresh()">Đọc trạng thái / giới hạn</button>
+<button mat-raised-button color="warn" (click)="stop()">Dừng phát / hủy gửi</button>
+<hr style="margin:20px 0">
+<label>Âm lượng: <b>{{volume}}%</b></label>
+<input style="width:100%" type="range" min="0" max="100" step="1" [value]="volume" (input)="volumeChange($event.target.value)">
+<p>{{volumeState}}</p>
+<p style="font-size:12px">100% là mức tín hiệu số; chưa hiệu chỉnh theo ngưỡng méo ampli. Báo lửa vẫn ưu tiên.</p>
+<button mat-button [disabled]="busy" (click)="close()">Đóng</button>
+</div>

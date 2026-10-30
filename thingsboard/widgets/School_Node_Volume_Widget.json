@@ -1,0 +1,56 @@
+{
+  "widget": {
+    "id": "b2f2cf90-d33c-4cf2-9b18-62a0b6ff1a17",
+    "typeFullFqn": "system.control_widgets.knob_control",
+    "type": "rpc",
+    "sizeX": 8,
+    "sizeY": 6,
+    "config": {
+      "showTitle": true,
+      "backgroundColor": "#ffffff",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "padding": "0px",
+      "settings": {
+        "requestTimeout": 60000,
+        "maxValue": 100,
+        "initialValue": 100,
+        "minValue": 0,
+        "title": "Âm lượng (%)",
+        "getValueMethod": "getVolume",
+        "setValueMethod": "setVolume",
+        "requestPersistent": false
+      },
+      "title": "ÂM LƯỢNG · 0–100%",
+      "dropShadow": true,
+      "enableFullscreen": false,
+      "widgetStyle": {},
+      "titleStyle": {
+        "fontSize": "16px",
+        "fontWeight": 400
+      },
+      "useDashboardTimewindow": true,
+      "showLegend": false,
+      "actions": {},
+      "decimals": 0,
+      "targetDevice": {
+        "type": "device",
+        "deviceId": "00000000-0000-0000-0000-000000000000"
+      },
+      "borderRadius": "16px"
+    },
+    "row": 25,
+    "col": 16
+  },
+  "aliasesInfo": {
+    "datasourceAliases": {},
+    "targetDeviceAlias": null
+  },
+  "filtersInfo": {
+    "datasourceFilters": {}
+  },
+  "originalSize": {
+    "sizeX": 8,
+    "sizeY": 6
+  },
+  "originalColumns": 24
+}
